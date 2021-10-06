@@ -17,8 +17,10 @@ class minify {
     }
 
     async css() {
-        const whatwehe = new files();
-        console.log( await whatwehe.getPathsToModify() );
+        const file_instance = new files();
+        const { css } = await file_instance.getPathsToModify();
+        
+        console.log( css );
     }
 
     async js() {
