@@ -1,5 +1,5 @@
 /* Singleton Pattern */
-const serve = require("koa-static");
+const fs = require('await-fs');
 const app = require('../app');
 
 class files {
@@ -13,8 +13,13 @@ class files {
         this.constructor.instance = this;
     }
 
-    toMinify() {
-        console.log( app.use( serve('../files_to_compile.json') ) );
+    async toMinify() {
+        try{
+            let json = await fs.readFile('files_to_compile.json','utf8')
+            console.log(json)
+        }catch(err){
+            console.log("Missing or injured JSON file!")
+        }
     }
 }
 
