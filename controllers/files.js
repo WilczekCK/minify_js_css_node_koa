@@ -20,7 +20,7 @@ class files {
 
     async getPathsToModify() {
         try{
-            let json = await fs.readFile('files_to_compile.json','utf8')
+            let json = await fs.readFile('assets/files_to_compile.json','utf8')
             return json;
         }catch(err){
             console.error("Missing or injured JSON file! || files_to_compile.json")

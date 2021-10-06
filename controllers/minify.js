@@ -2,8 +2,8 @@
 const app = require('../app');
 const files = require('./files');
 
-const minify = require('@node-minify/core');
-const cssnano = require('@node-minify/cssnano');
+const minifyDep = require('@node-minify/core');
+const cssnanoDep = require('@node-minify/cssnano');
 
 class minify {
     constructor(){
@@ -16,10 +16,9 @@ class minify {
         this.constructor.instance = this;
     }
 
-    public 
-
     async css() {
-
+        const whatwehe = new files();
+        console.log( await whatwehe.getPathsToModify() );
     }
 
     async js() {
@@ -27,7 +26,7 @@ class minify {
     }
 
     async start() {
-
+        await this.css();
     }
 }
 
