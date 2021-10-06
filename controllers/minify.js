@@ -20,7 +20,9 @@ class minify {
         const file_instance = new files();
         const { css } = await file_instance.getPathsToModify();
         
-        console.log( css );
+        for await(var file of css){
+            console.log(file);
+        }
     }
 
     async js() {
