@@ -22,8 +22,8 @@ Tool for minifying CSS and JS files
     npm run bundle [name_of_package]
     ex. npm run bundle myscript 
 </li>
-<li>4. Wait, it will compile [name_of_package]_minified.zip package</li>
-<li>5. DONE</li>
+<li> Wait, it will compile [name_of_package]_minified.zip package</li>
+<li> DONE</li>
 </ol>
 
 <h2>CHANGELOG</h2>
