@@ -3,31 +3,11 @@
         "rtl",
         "css/be",
         "css/responsive",
-        "css/responsive-off",
-        "css/woocommerce",
-        "css/skins/blue/style",
-        "css/skins/brown/style",
-        "css/skins/chocolate/style",
-        "css/skins/gold/style",
-        "css/skins/green/style",
-        "css/skins/olive/style",
-        "css/skins/orange/style",
-        "css/skins/pink/style",
-        "css/skins/red/style",
-        "css/skins/sea/style",
-        "css/skins/violet/style",
-        "css/skins/yellow/style",
-        "fonts/fontawesome/fontawesome",
-        "fonts/mfn/icons"
+        "css/responsive-off"
     ],
     "js":[
-        "js/lazyload-config",
-        "js/live-search", 
         "js/menu",
         "js/plugins",
-        "js/scripts", 
-        "js/woocommerce",
-        "js/parallax/stellar",
-        "js/parallax/translate3d"
+        "js/scripts"
     ]
 }
