@@ -14,6 +14,10 @@ class files {
         this.constructor.instance = this;
     }
 
+    /**
+        Package related
+     */
+
     async getPathsToModify() {
         try{
             let json = await fs.readFile('files_to_compile.json','utf8')
@@ -36,6 +40,10 @@ class files {
         return packageName;
     }
 
+    /*
+        Zip Related
+    */
+
     async unzipPackage() {
         try{
             const zip = new AdmZip( `${ this.getPackageName() }.zip` );
@@ -54,6 +62,10 @@ class files {
             console.error("There is some problem with packing ZIP file || Minified package to ZIP")
         }
     }
+
+    /* 
+        Dir Related
+    */
 
     async removePlaygroundDir() {
         try{
