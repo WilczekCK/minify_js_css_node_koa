@@ -21,6 +21,10 @@ Tool for minifying CSS and JS files
 <li>4. Wait, it will compile [name_of_package]_minified.zip package</li>
 <li>5. DONE</li>
 </ol>
-CHANGELOG:
-    06.10.2021 -> Minify CSS/JS
+
+<h2>CHANGELOG</h2>
+<ul>
+    <li>06.10.2021 -> Minify CSS/JS</li>
+</ul>
+
     
