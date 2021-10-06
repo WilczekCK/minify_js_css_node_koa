@@ -1,8 +1,13 @@
 /* Singleton */
 
 class files {
-    constructor( instance = 'package.zip' ){
-        console.log(instance);
+    constructor(){
+        const instance = this.constructor.instance;
+        if (instance) {
+            return instance;
+        }
+
+        this.constructor.instance = this;
     }
 }
 
