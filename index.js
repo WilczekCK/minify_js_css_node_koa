@@ -3,6 +3,7 @@ const app = require('./app');
 
 //Controllers
 const file = require('./controllers/files');
+const minify = require('./controllers/minify');
 
 //Static files
 app.use( serve('.') );
