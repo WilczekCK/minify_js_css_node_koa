@@ -1,5 +1,7 @@
 /* Singleton Pattern */
 const app = require('../app');
+const files = require('./files');
+
 const minify = require('@node-minify/core');
 const cssnano = require('@node-minify/cssnano');
 
@@ -12,6 +14,20 @@ class minify {
         }
 
         this.constructor.instance = this;
+    }
+
+    public 
+
+    async css() {
+
+    }
+
+    async js() {
+
+    }
+
+    async start() {
+
     }
 }
 
