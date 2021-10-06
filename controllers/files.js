@@ -19,7 +19,7 @@ class files {
             let json = await fs.readFile('files_to_compile.json','utf8')
             return json;
         }catch(err){
-            console.log("Missing or injured JSON file!")
+            console.error("Missing or injured JSON file! || files_to_compile.json")
         }
     }
 
@@ -37,13 +37,13 @@ class files {
     }
 
     async unzipPackage() {
-        
-        
-        const zip = new StreamZip.async({ file: `${ this.getPackageName() }` });
-
-
-        await zip.extract(null, './extracted');
-        await zip.close();
+        try{
+            const zip = new StreamZip.async({ file: `${ this.getPackageName() }` });
+            await zip.extract(null, './extracted');
+            await zip.close();
+        }catch(err){
+            console.error("Missing or injured ZIP file! || Package to minify ");
+        }
     }
 }
 
