@@ -1,7 +1,7 @@
 /* Singleton Pattern */
 const fs = require('await-fs');
 const app = require('../app');
-var AdmZip = require("adm-zip");
+const AdmZip = require("adm-zip");
 
 class files {
     constructor(){
@@ -20,8 +20,8 @@ class files {
 
     async getPathsToModify() {
         try{
-            let json = await fs.readFile('files_to_compile.json','utf8')
-            return json;
+            let json = await fs.readFile('assets/files_to_compile.json','utf8')
+            return JSON.parse(json);
         }catch(err){
             console.error("Missing or injured JSON file! || files_to_compile.json")
         }
