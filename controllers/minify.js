@@ -1,5 +1,4 @@
 /* Singleton Pattern */
-const app = require('../app');
 const files = require('./files');
 
 const minifyDep = require('@node-minify/core');
@@ -46,8 +45,13 @@ class minify {
     }
 
     async start() {
+        const file_instance = new files();
+        
+        await file_instance.unzipPackage()
         await this.css();
         await this.js();
+        await file_instance.zipPackage();
+        await file_instance.removePlaygroundDir();
     }
 }
 

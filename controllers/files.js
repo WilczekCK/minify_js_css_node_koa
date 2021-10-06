@@ -1,6 +1,5 @@
 /* Singleton Pattern */
 const fs = require('await-fs');
-const app = require('../app');
 const AdmZip = require("adm-zip");
 
 class files {
@@ -56,7 +55,10 @@ class files {
     async zipPackage() {
         try{
             const zip = new AdmZip();
-            zip.addLocalFolder( `extract/${this.getPackageName()}` );
+            
+            fs.fchmod()
+            zip.addLocalFolder( `extract/${this.getPackageName()}`, this.getPackageName() );
+
             zip.writeZip(`${ this.getPackageName() }_minified.zip`);
         }catch(err){
             console.error("There is some problem with packing ZIP file || Minified package to ZIP")
