@@ -3,9 +3,9 @@ Tool for minifying CSS and JS files
 
 <h2>Must have:</h2>
 <ul>
-- Node version >= 14.18.0 
-- Working terminal
-- Of course, Install all dependencies! (npm i)
+    <li> Node version >= 14.18.0 </li> 
+    <li> Working terminal </li>
+    <li> Of course, Install all dependencies! (npm i) </li>
 </ul>
 
 
