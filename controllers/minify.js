@@ -21,7 +21,14 @@ class minify {
         const { css } = await file_instance.getPathsToModify();
         
         for await(var file of css){
-            console.log(file);
+            await minifyDep({
+                compressor: cssnanoDep,
+                input:  `extract/${ file_instance.getPackageName() }/${file}.css`,
+                output: `extract/${ file_instance.getPackageName() }/${file}.min.css`,
+                callback: function(err, min) {
+                    console.log(err)
+                }
+            })
         }
     }
 
