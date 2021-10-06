@@ -10,7 +10,6 @@
   "author": "Pawel Wilk",
   "license": "ISC",
   "dependencies": {
-    "@node-minify/babel-minify": "^6.2.0",
     "@node-minify/core": "^6.2.0",
     "@node-minify/cssnano": "^6.2.0",
     "@node-minify/terser": "^6.2.0",
