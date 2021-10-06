@@ -39,9 +39,19 @@ class files {
     async unzipPackage() {
         try{
             const zip = new AdmZip( `${ this.getPackageName() }.zip` );
-            zip.extractAllTo( 'extracted/', true);
+            zip.extractAllTo( 'extract/', true);
         }catch(err){
-            console.error("Missing or injured ZIP file! || Package to minify ");
+            console.error("Missing or injured ZIP file! || Package to UNZIP ");
+        }
+    }
+
+    async zipPackage() {
+        try{
+            const zip = new AdmZip();
+            zip.addLocalFolder( `extract/${this.getPackageName()}` );
+            zip.writeZip(`${ this.getPackageName() }_minified.zip`);
+        }catch(err){
+            console.error("There is some problem with packing ZIP file || Minified package to ZIP")
         }
     }
 }

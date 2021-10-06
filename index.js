@@ -12,6 +12,7 @@ file_instance = new file();
 
 (async function() {
     await file_instance.unzipPackage();
+    await file_instance.zipPackage();
 })();
 
 app.listen(3000);
