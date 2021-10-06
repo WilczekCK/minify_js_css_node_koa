@@ -10,7 +10,10 @@ app.use( serve('.') );
 //Inits
 file_instance = new file();
 
-//Handler
-file_instance.toMinify();
+(async function() {
+    await file_instance.unzipPackage();
+    await file_instance.zipPackage();
+    await file_instance.removePlaygroundDir();
+})();
 
 app.listen(3000);
