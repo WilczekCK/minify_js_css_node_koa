@@ -14,7 +14,10 @@ file_instance = new file();
 minify_instance = new minify();
 
 (async function() {
-    await minify_instance.start();
+    await file_instance.unzipPackage()
+        await minify_instance.start();
+    await file_instance.zipPackage();
+    await file_instance.removePlaygroundDir();
 })();
 
 app.listen(3000);
