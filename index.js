@@ -1,23 +1,20 @@
 const serve = require('koa-static');
 const app = require('./app');
 
-
 //Controllers
-const file = require('./controllers/files');
 const minify = require('./controllers/minify');
 
 //Static files
 app.use( serve('.') );
 
 //Inits
-file_instance = new file();
 minify_instance = new minify();
 
 (async function() {
-    await file_instance.unzipPackage()
-        await minify_instance.start();
-    await file_instance.zipPackage();
-    await file_instance.removePlaygroundDir();
+    await minify_instance.start();
+
+    console.log('DONE --- CSS/JS SUCCESSFULLY MINIFIED :)')
+    process.exit()
 })();
 
 app.listen(3000);

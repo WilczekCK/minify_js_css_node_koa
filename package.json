@@ -14,11 +14,14 @@
     "@node-minify/cssnano": "^6.2.0",
     "@node-minify/terser": "^6.2.0",
     "adm-zip": "^0.5.7",
+    "archiver": "^5.3.0",
     "await-fs": "^1.0.0",
     "json": "^11.0.0",
     "koa": "^2.13.3",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.13",
+    "zip-lib": "^0.7.2",
+    "zip-local": "^0.3.4"
   }
 }

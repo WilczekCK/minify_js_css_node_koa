@@ -46,8 +46,15 @@ class minify {
     }
 
     async start() {
+        const file_instance = new files();
+        
+        await file_instance.unzipPackage()
         await this.css();
         await this.js();
+
+        //await file_instance.zipPackage(); <-- issued!
+        
+        //await file_instance.removePlaygroundDir();
     }
 }
 
