@@ -1,7 +1,7 @@
 /* Singleton Pattern */
 const fs = require('await-fs');
 const app = require('../app');
-const StreamZip = require('node-stream-zip');
+var AdmZip = require("adm-zip");
 
 class files {
     constructor(){
@@ -32,15 +32,14 @@ class files {
             }
         });
 
-        if (!packageName) packageName = 'package.zip';
+        if (!packageName) packageName = 'package';
         return packageName;
     }
 
     async unzipPackage() {
         try{
-            const zip = new StreamZip.async({ file: `${ this.getPackageName() }` });
-            await zip.extract(null, './extracted');
-            await zip.close();
+            const zip = new AdmZip( `${ this.getPackageName() }.zip` );
+            zip.extractAllTo( 'extracted/', true);
         }catch(err){
             console.error("Missing or injured ZIP file! || Package to minify ");
         }
