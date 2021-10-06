@@ -1,0 +1,21 @@
+{
+    "css":[
+        "rtl",
+        "css/be",
+        "css/responsive",
+        "css/responsive-off",
+        "css/woocommerce",
+        "fonts/fontawesome/fontawesome",
+        "fonts/mfn/icons"
+    ],
+    "js":[
+        "js/lazyload-config",
+        "js/live-search", 
+        "js/menu",
+        "js/plugins",
+        "js/scripts", 
+        "js/woocommerce",
+        "js/parallax/stellar.js",
+        "js/parallax/translate3d"
+    ]
+}
