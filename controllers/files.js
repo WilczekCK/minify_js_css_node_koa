@@ -54,6 +54,14 @@ class files {
             console.error("There is some problem with packing ZIP file || Minified package to ZIP")
         }
     }
+
+    async removePlaygroundDir() {
+        try{
+             fs.rmdir('extract', {recursive: true, force: true});
+        }catch(err){
+            console.error("There is some problem with removing the extract directory || Removing playground");
+        }
+    }
 }
 
 module.exports = files;
