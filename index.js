@@ -9,8 +9,6 @@ app.use( serve('.') );
 
 //Inits
 file_instance = new file();
-
-//Handler
-file_instance.toMinify();
+console.log( file_instance.getPackageName() );
 
 app.listen(3000);

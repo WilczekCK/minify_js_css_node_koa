@@ -13,13 +13,26 @@ class files {
         this.constructor.instance = this;
     }
 
-    async toMinify() {
+    async getPathsToModify() {
         try{
             let json = await fs.readFile('files_to_compile.json','utf8')
-            console.log(json)
+            return json;
         }catch(err){
             console.log("Missing or injured JSON file!")
         }
+    }
+
+    getPackageName() {
+        //Get bundle name to pack
+        let packageName = undefined;
+        process.argv.forEach(function (val, index, array) {
+            if( index === 2 ) {
+                packageName = val;
+            }
+        });
+
+        if (!packageName) packageName = 'package.zip';
+        return packageName;
     }
 }
 
