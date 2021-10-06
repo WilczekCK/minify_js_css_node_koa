@@ -1,6 +1,7 @@
 /* Singleton Pattern */
 const fs = require('await-fs');
 const app = require('../app');
+const StreamZip = require('node-stream-zip');
 
 class files {
     constructor(){
@@ -33,6 +34,16 @@ class files {
 
         if (!packageName) packageName = 'package.zip';
         return packageName;
+    }
+
+    async unzipPackage() {
+        
+        
+        const zip = new StreamZip.async({ file: `${ this.getPackageName() }` });
+
+
+        await zip.extract(null, './extracted');
+        await zip.close();
     }
 }
 

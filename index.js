@@ -9,6 +9,9 @@ app.use( serve('.') );
 
 //Inits
 file_instance = new file();
-console.log( file_instance.getPackageName() );
+
+(async function() {
+    await file_instance.unzipPackage();
+})();
 
 app.listen(3000);
