@@ -1,0 +1,15 @@
+{
+  "name": "webpack_minify_js_css_node",
+  "version": "1.0.0",
+  "description": "Insert .zip file, choose targets in json file and minify them!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pawel Wilk",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.3",
+    "nodemon": "^2.0.13"
+  }
+}
