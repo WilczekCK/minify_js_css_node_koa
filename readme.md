@@ -8,7 +8,11 @@ Tool for minifying CSS and JS files
 - Of course, Install all dependencies! (npm i)
 </ul>
 
+
 <h2>How it works?</h2>
+
+<p>Compile CSS with <a href="https://cssnano.co/">NanoCSS</a></p>
+<p>Compile JS with <a href="https://terser.org/">Terser</a></p>
 
 <ol>
 <li> Insert a .zip package ( <b>with directory inside, which use the same name, zip should contain directory first, inside it all files</b> ) into the root directory. </li>
